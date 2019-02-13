@@ -50,6 +50,12 @@
             margin: auto;
             padding: 5pt;
         }
+
+        #currentWeather {
+            padding-top: 20pt;
+            width: 30%;
+            margin: auto;
+        }
     </style>
 </head>
 
@@ -83,6 +89,22 @@
             </div>
         </div>
     </div>
+    <div id="currentWeather">
+        <h2 id="conditionsHead">Current Weather</h2>
+        <div class="row row-eq-height">
+            <div class="col-md-6" id="iconDescription" style="width:30%">
+            </div>
+            <div class="col-md-6" id="weatherData" style="width:70%">
+                <p id="currentTemp" style=display:none>Temperature: </p>
+                <p id="currentHumid" style=display:none>Humidity: </p>
+                <p id="currentWindSpeed" style=display:none>Wind Speed: </p>
+                <p id="currentWindDir" style=display:none>Direction: </p>
+            </div>
+        </div>
+    </div>
+
+    <script src='js/jquery-3.3.1.min.js'></script>
+    <script src='js/home.js'></script>
 </body>
 
 </html>
