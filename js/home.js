@@ -29,13 +29,14 @@ $(document).ready(function () {
             /* Apply */
             /* Current Conditions Left */
             $('#iconDescription').prepend($('<img class="addedInfo" alt="' + condition + '" src="https://openweathermap.org/img/w/' + icon + '.png">').html('</img>'));
-            $('#iconDescription').append($('<p>').html('<p class="addedInfo">' + description + '</p>'));
+            $('#iconDescription').append($('<h3 class="addedInfo">').text(description));
 
             /* Current Conditions Right */
-            $('#currentTemp').before($('<p class="addedInfo">').text('Current Temp: ' + temp + " " + 'F'));
-            $('#currentHumid').before($('<p>').html('<p class="addedInfo">' + $('#currentHumid').text() + humidity + "%" + '</p>'));
-            $('#currentWindSpeed').before($('<p class="addedInfo">').text($('#currentWindSpeed').text() + windSpeed + " " + windSpeedUnit));
-            $('#currentWindDir').before($('<p class="addedInfo">').text($('#currentWindDir').text() + windDir + " degrees (meteorlogical)"));
+            // Could use labels here instead of just text
+            $('#currentTemp').before($('<h4 class="addedInfo">').text('Current Temp: ' + temp + " " + 'F'));
+            $('#currentHumid').before($('<h4>').text($('#currentHumid').text() + humidity + "%"));
+            $('#currentWindSpeed').before($('<h4 class="addedInfo">').text($('#currentWindSpeed').text() + windSpeed + " " + windSpeedUnit));
+            $('#currentWindDir').before($('<h4 class="addedInfo">').text($('#currentWindDir').text() + windDir + " degrees (meteorlogical)"));
 
             console.log("Ajax call to retrieve current weather info successful.")
 
@@ -45,3 +46,7 @@ $(document).ready(function () {
         }
     });
 });
+
+function searchEcosia() {
+    window.location.href = 'https://www.ecosia.org/search?q=' + $('#searchBox').val();
+}
