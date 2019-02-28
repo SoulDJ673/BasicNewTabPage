@@ -51,12 +51,43 @@
             margin: auto;
             padding: 5pt;
         }
+        .flex-container {
+            display: flex;
+        }
+
+        .overlay {
+            justify-content: center;
+            justify-items: center;
+            align-content: center;
+            align-items: center;
+            background-color: #00000005;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            bottom: 0;
+            overflow: hidden;
+            position: fixed;
+            z-index: 3;
+        }
     </style>
 </head>
 
 <body>
+    <!-- Search Bar Popup Overlay -->
+    <div class="flex-container overlay overlaySearch" style="display:none">
+        <div class="flex-container overlaySearch"
+            style="justify-content: center;align-content: center;background-color: #222222;border-radius: 15px;width:25%;z-index: 5;box-shadow: 0px 0px 10px #00000050;">
+            <form onsubmit="searchEcosia();return false;">
+                <input type="text" placeholder="Search Ecosia"
+                    style="margin:15px;background-color: #222222;border-color: #00000000;width:100%;" id="searchBox">
+                <input type="submit" style="display:none">
+            </form>
+        </div>
+        <div class="flex-container overlay overlaySearch" style="display:none" onclick="$('.overlaySearch').hide()">
+        </div>
+    </div>
     <br />
-    <div class="container" id="header-div">
+    <div class="container" id="header-div" onclick="$('.overlaySearch').show()">
         <h1 class="text-center page-header">Lonks</h1>
     </div>
     <br />
