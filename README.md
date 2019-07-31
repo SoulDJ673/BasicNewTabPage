@@ -5,4 +5,4 @@ I realized that it wasn't really basic anymore so I changed the title.  I don't 
 
 Just replace the list with whatever links you'd like.
 
-<a href="https://souldj673.github.io/BasicNewTabPage/home.html">Actual Page</a>
+<a href="https://souldj673.github.io/NotSoBasicNewTabPage/home.html">Actual Page</a>
